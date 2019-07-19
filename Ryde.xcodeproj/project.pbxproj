@@ -3,25 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D731137B2279DFD100862832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D731137A2279DFD100862832 /* GoogleService-Info.plist */; };
+		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
+		D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A422E1D4F400CA7F70 /* meViewController.swift */; };
+		D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */; };
 		D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */; };
-		D7E2A7D72279DE7900B8EA8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2A7D62279DE7900B8EA8A /* ViewController.swift */; };
 		D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7D82279DE7900B8EA8A /* Main.storyboard */; };
 		D7E2A7DC2279DE7B00B8EA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */; };
 		D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7DD2279DE7B00B8EA8A /* LaunchScreen.storyboard */; };
+		EAAC8CA14F060BA1306A5F28 /* Pods_Ryde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E89669B22C859C05C84C42 /* Pods_Ryde.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0E20C019934B09179F0D4D /* Pods-Ryde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ryde.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ryde/Pods-Ryde.release.xcconfig"; sourceTree = "<group>"; };
+		BF398BEF0C641E1F5C89F03C /* Pods-Ryde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ryde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ryde/Pods-Ryde.debug.xcconfig"; sourceTree = "<group>"; };
+		D731137A2279DFD100862832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		D73709A422E1D4F400CA7F70 /* meViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meViewController.swift; sourceTree = "<group>"; };
+		D752904122A6745600B09412 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D7E2A7D12279DE7900B8EA8A /* Ryde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7E2A7D62279DE7900B8EA8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7E2A7D92279DE7900B8EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7E2A7DE2279DE7B00B8EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7E2A7E02279DE7B00B8EA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E89669B22C859C05C84C42 /* Pods_Ryde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ryde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +40,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAAC8CA14F060BA1306A5F28 /* Pods_Ryde.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4E7BA5159E9720192D2B482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF398BEF0C641E1F5C89F03C /* Pods-Ryde.debug.xcconfig */,
+				0E0E20C019934B09179F0D4D /* Pods-Ryde.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A964189B8CB0720A3071DCF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D752904122A6745600B09412 /* SwiftUI.framework */,
+				E0E89669B22C859C05C84C42 /* Pods_Ryde.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D73709A022E1D0AD00CA7F70 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D73709A122E1D0C500CA7F70 /* Authentication.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D73709A322E1D4D700CA7F70 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				D73709A422E1D4F400CA7F70 /* meViewController.swift */,
+			);
+			path = me;
+			sourceTree = "<group>";
+		};
 		D7E2A7C82279DE7900B8EA8A = {
 			isa = PBXGroup;
 			children = (
 				D7E2A7D32279DE7900B8EA8A /* Ryde */,
 				D7E2A7D22279DE7900B8EA8A /* Products */,
+				A4E7BA5159E9720192D2B482 /* Pods */,
+				A964189B8CB0720A3071DCF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +102,33 @@
 		D7E2A7D32279DE7900B8EA8A /* Ryde */ = {
 			isa = PBXGroup;
 			children = (
+				D73709A022E1D0AD00CA7F70 /* Helpers */,
+				D7E2A7E72279DE9F00B8EA8A /* ViewControllers */,
+				D7E2A7E62279DE8700B8EA8A /* UI */,
 				D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */,
-				D7E2A7D62279DE7900B8EA8A /* ViewController.swift */,
-				D7E2A7D82279DE7900B8EA8A /* Main.storyboard */,
 				D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */,
-				D7E2A7DD2279DE7B00B8EA8A /* LaunchScreen.storyboard */,
 				D7E2A7E02279DE7B00B8EA8A /* Info.plist */,
+				D731137A2279DFD100862832 /* GoogleService-Info.plist */,
 			);
 			path = Ryde;
+			sourceTree = "<group>";
+		};
+		D7E2A7E62279DE8700B8EA8A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D7E2A7DD2279DE7B00B8EA8A /* LaunchScreen.storyboard */,
+				D7E2A7D82279DE7900B8EA8A /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D7E2A7E72279DE9F00B8EA8A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D73709A322E1D4D700CA7F70 /* me */,
+				D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7E2A7E32279DE7B00B8EA8A /* Build configuration list for PBXNativeTarget "Ryde" */;
 			buildPhases = (
+				5DBA0C59A641BC6F5A37845C /* [CP] Check Pods Manifest.lock */,
 				D7E2A7CD2279DE7900B8EA8A /* Sources */,
 				D7E2A7CE2279DE7900B8EA8A /* Frameworks */,
 				D7E2A7CF2279DE7900B8EA8A /* Resources */,
+				6CCD8E622F3BA0B4F72CDDF2 /* [CP] Embed Pods Frameworks */,
+				8384DD8F26CB0C180C3D11C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */,
+				D731137B2279DFD100862832 /* GoogleService-Info.plist in Resources */,
 				D7E2A7DC2279DE7B00B8EA8A /* Assets.xcassets in Resources */,
 				D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */,
 			);
@@ -130,13 +201,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DBA0C59A641BC6F5A37845C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ryde-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CCD8E622F3BA0B4F72CDDF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8384DD8F26CB0C180C3D11C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ryde/Pods-Ryde-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7E2A7CD2279DE7900B8EA8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E2A7D72279DE7900B8EA8A /* ViewController.swift in Sources */,
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
+				D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */,
+				D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */,
+				D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,10 +412,13 @@
 		};
 		D7E2A7E42279DE7B00B8EA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF398BEF0C641E1F5C89F03C /* Pods-Ryde.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ryde/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,10 +432,13 @@
 		};
 		D7E2A7E52279DE7B00B8EA8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0E20C019934B09179F0D4D /* Pods-Ryde.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Ryde/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
