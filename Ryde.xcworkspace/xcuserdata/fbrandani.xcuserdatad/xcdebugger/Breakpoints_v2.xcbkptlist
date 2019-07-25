@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ryde/Helpers/Authentication.swift"
-            timestampString = "585231628.533316"
+            filePath = "Ryde/ViewControllers/me/meViewController.swift"
+            timestampString = "585238200.2815959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "authUI(_:didSignInWith:error:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,62 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Ryde/Helpers/Authentication.swift"
-            timestampString = "585231628.533697"
+            filePath = "Ryde/ViewControllers/me/meViewController.swift"
+            timestampString = "585238200.281894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "authUI(_:didSignInWith:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Ryde/Helpers/Authentication.swift"
-            timestampString = "585231628.533921"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Ryde.Authentication.() -&gt; Ryde.Authentication(in _9F6DE973951312780947E493B0829389).init() -&gt; Ryde.Authentication"
-                  moduleName = "Ryde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fbrandani/Coding/personal/Ryde/Ryde/Helpers/Authentication.swift"
-                  timestampString = "585231628.846354"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "677">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRAuth, Swift.Optional&lt;__C.FIRUser&gt;) -&gt; () in Ryde.Authentication.() -&gt; Ryde.Authentication(in _9F6DE973951312780947E493B0829389).init() -&gt; Ryde.Authentication"
-                  moduleName = "Ryde"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fbrandani/Coding/personal/Ryde/Ryde/Helpers/Authentication.swift"
-                  timestampString = "585231628.8479691"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "53">
-               </Location>
-            </Locations>
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "meViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,10 +10,10 @@
 		D731137B2279DFD100862832 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D731137A2279DFD100862832 /* GoogleService-Info.plist */; };
 		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
 		D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A422E1D4F400CA7F70 /* meViewController.swift */; };
+		D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73709A622E1FD7B00CA7F70 /* Assets.xcassets */; };
 		D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */; };
 		D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */; };
 		D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7D82279DE7900B8EA8A /* Main.storyboard */; };
-		D7E2A7DC2279DE7B00B8EA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */; };
 		D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7DD2279DE7B00B8EA8A /* LaunchScreen.storyboard */; };
 		EAAC8CA14F060BA1306A5F28 /* Pods_Ryde.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E89669B22C859C05C84C42 /* Pods_Ryde.framework */; };
 /* End PBXBuildFile section */
@@ -24,12 +24,12 @@
 		D731137A2279DFD100862832 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		D73709A422E1D4F400CA7F70 /* meViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meViewController.swift; sourceTree = "<group>"; };
+		D73709A622E1FD7B00CA7F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D752904122A6745600B09412 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D7E2A7D12279DE7900B8EA8A /* Ryde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7E2A7D92279DE7900B8EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7E2A7DE2279DE7B00B8EA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7E2A7E02279DE7B00B8EA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E89669B22C859C05C84C42 /* Pods_Ryde.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ryde.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +102,11 @@
 		D7E2A7D32279DE7900B8EA8A /* Ryde */ = {
 			isa = PBXGroup;
 			children = (
+				D73709A622E1FD7B00CA7F70 /* Assets.xcassets */,
 				D73709A022E1D0AD00CA7F70 /* Helpers */,
 				D7E2A7E72279DE9F00B8EA8A /* ViewControllers */,
 				D7E2A7E62279DE8700B8EA8A /* UI */,
 				D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */,
-				D7E2A7DB2279DE7B00B8EA8A /* Assets.xcassets */,
 				D7E2A7E02279DE7B00B8EA8A /* Info.plist */,
 				D731137A2279DFD100862832 /* GoogleService-Info.plist */,
 			);
@@ -194,7 +194,7 @@
 			files = (
 				D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */,
 				D731137B2279DFD100862832 /* GoogleService-Info.plist in Resources */,
-				D7E2A7DC2279DE7B00B8EA8A /* Assets.xcassets in Resources */,
+				D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */,
 				D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

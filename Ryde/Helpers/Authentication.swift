@@ -25,9 +25,10 @@ internal class Authentication: NSObject, FUIAuthDelegate {
         super.init()
         ui.delegate = self
         ui.providers = providers
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            print (self.getCurrentUser())
-        }
+    }
+
+    internal func registerCallbackForAuthorizationStateChange(callback: @escaping AuthStateDidChangeListenerBlock) {
+        Auth.auth().addStateDidChangeListener(callback)
     }
 
     internal func handleURL(url: URL, source: String?) -> Bool {
@@ -43,6 +44,10 @@ internal class Authentication: NSObject, FUIAuthDelegate {
     internal func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         print(authDataResult);
     }
+    
+    internal func logout() {
+        try! ui.signOut()
+    }
 
 }
 
@@ -50,5 +55,10 @@ extension Authentication {
     func getCurrentUser() -> User? {
         return Auth.auth().currentUser
     }
+    func getAdditionalInfoForUser(user: User? = Auth.auth().currentUser ) -> Any? { //Dictionary? {
+        guard let thisUser = user else { return nil }
+        return nil
+    }
+
 
 }
