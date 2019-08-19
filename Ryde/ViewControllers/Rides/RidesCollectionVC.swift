@@ -40,6 +40,8 @@ class RideCollectionCell: CollectionViewSlantedCell {
     @IBOutlet var lbl_km: UILabel!
     @IBOutlet var lbl_composition: UILabel!
     @IBOutlet var lbl_tags: UILabel!
+    @IBOutlet var lbl_done: UILabel!
+    @IBOutlet var lbl_likes: UILabel!
 
     func setupWithModel(_ rideModel: RideModel) {
         if let image = rideModel.image {
@@ -54,11 +56,9 @@ class RideCollectionCell: CollectionViewSlantedCell {
         lbl_difficulty.text = String(repeating: "✪ ", count: rideModel.difficulty)
         lbl_composition.text = rideModel.composition.stringify()
         lbl_tags.text = rideModel.tags?.joined(separator: ", ")
-        //lbl_country.text = rideModel.country
-
-        let countries  = rideModel.country.split(separator: "/").compactMap { Countries.getCountry(String($0))}.map { "\($0.flag) \($0.code2)"}
-        lbl_country.text = countries.joined(separator: " / ")
-
+        lbl_country.text = rideModel.country.split(separator: "/").compactMap { Countries.getCountry(String($0))}.map { "\($0.flag) \($0.code2)"}.joined(separator: " / ")
+        lbl_likes.text = "\(rideModel.likes)"
+        lbl_done.text = "\(rideModel.done)"
 
     }
 

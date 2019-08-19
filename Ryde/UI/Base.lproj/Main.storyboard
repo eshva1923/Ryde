@@ -472,11 +472,57 @@
                                                         <constraint firstAttribute="trailing" secondItem="FhK-fH-vnZ" secondAttribute="trailing" id="Ga6-6B-pq4"/>
                                                     </constraints>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-vU-ABM" userLabel="done">
+                                                    <rect key="frame" x="290" y="44.666666666666664" width="50" height="19.999999999999993"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3e-AW-DRq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32.666666666666664" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✓" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-a2-vGW">
+                                                            <rect key="frame" x="32.666666666666686" y="0.0" width="17.333333333333329" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="7bp-d1-bS2"/>
+                                                        <constraint firstAttribute="height" constant="20" id="vwd-4Y-xu9"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-1F-mVX" userLabel="like">
+                                                    <rect key="frame" x="230" y="44.666666666666664" width="50" height="19.999999999999993"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♡" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuU-7j-vel">
+                                                            <rect key="frame" x="0.0" y="0.0" width="18" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-h9-P11">
+                                                            <rect key="frame" x="18" y="0.0" width="32" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="r3X-d6-j8S"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="0jD-1F-mVX" firstAttribute="centerY" secondItem="fkh-vU-ABM" secondAttribute="centerY" id="3EU-FH-8Mb"/>
+                                                <constraint firstItem="fkh-vU-ABM" firstAttribute="leading" secondItem="0jD-1F-mVX" secondAttribute="trailing" constant="10" id="A9t-v9-FiA"/>
                                                 <constraint firstItem="X5X-2B-Ard" firstAttribute="leading" secondItem="jbR-P6-y8p" secondAttribute="leading" constant="8" id="BR9-TZ-POw"/>
+                                                <constraint firstItem="fkh-vU-ABM" firstAttribute="trailing" secondItem="X5X-2B-Ard" secondAttribute="trailing" id="Ccg-UC-YbQ"/>
                                                 <constraint firstItem="X5X-2B-Ard" firstAttribute="centerY" secondItem="jbR-P6-y8p" secondAttribute="centerY" id="N3J-tZ-vI7"/>
+                                                <constraint firstItem="0jD-1F-mVX" firstAttribute="height" secondItem="fkh-vU-ABM" secondAttribute="height" id="Vc9-F8-dcV"/>
+                                                <constraint firstItem="X5X-2B-Ard" firstAttribute="top" secondItem="fkh-vU-ABM" secondAttribute="bottom" id="mf1-Sj-va1"/>
                                                 <constraint firstAttribute="trailing" secondItem="X5X-2B-Ard" secondAttribute="trailing" constant="8" id="qPR-7P-g9M"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -486,7 +532,7 @@
                                                     <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
-                                                    <real key="value" value="1"/>
+                                                    <real key="value" value="1.5"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -514,7 +560,9 @@
                                     <outlet property="lbl_composition" destination="52y-cC-Rto" id="NPo-3t-0qH"/>
                                     <outlet property="lbl_country" destination="LfX-PE-Spd" id="5bs-1f-4NA"/>
                                     <outlet property="lbl_difficulty" destination="TDd-s9-t0O" id="tVg-xi-gWs"/>
+                                    <outlet property="lbl_done" destination="c3e-AW-DRq" id="Y3f-XT-Izl"/>
                                     <outlet property="lbl_km" destination="OfK-iO-pFD" id="EYc-Iz-X9n"/>
+                                    <outlet property="lbl_likes" destination="Eq0-h9-P11" id="7i3-PZ-y5n"/>
                                     <outlet property="lbl_tags" destination="P9s-WV-mKd" id="3Ul-wr-6kZ"/>
                                     <outlet property="lbl_title" destination="iMo-ni-hEg" id="KJg-Fj-zU1"/>
                                 </connections>

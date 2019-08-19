@@ -17,6 +17,8 @@ struct RideModel {
     let difficulty: Int
     let composition: RoadComposition
     let tags: [String]?
+    let done: Int
+    let likes: Int
 
     static func test() -> RideModel{
         return RideModel(image: nil,
@@ -30,7 +32,9 @@ struct RideModel {
                                                       dirt: 10,
                                                       sand: 0,
                                                       rocks: 0),
-                         tags: ["Mountain", "Alps", "Summer"])
+                         tags: ["Mountain", "Alps", "Summer"],
+                         done: 3,
+                         likes: 7)
     }
 }
 
