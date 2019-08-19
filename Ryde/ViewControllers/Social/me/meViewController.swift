@@ -25,7 +25,8 @@ internal class meViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         currentUser = Authentication.shared.getCurrentUser()
         if currentUser == nil {
-            Authentication.shared.displayLogin(onViewController: self)
+            //Authentication.shared.displayLogin(onViewController: self)
+            
         } else {
             setupMe()
         }
@@ -35,7 +36,7 @@ internal class meViewController: UIViewController {
     private func setupMe() {
         guard let user = currentUser else {return}
         lbl_userName.text = user.displayName
-        lbl_userRank.text =
+        //lbl_userRank.text = user.ra
         user.email
         user.photoURL
     }

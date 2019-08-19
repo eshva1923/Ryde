@@ -12,4 +12,7 @@ target 'Ryde' do
 	pod 'Firebase/Auth'
 	pod 'GoogleSignIn'
 	pod 'FirebaseUI'
+	#other
+	pod 'CollectionViewSlantedLayout', '~> 3.1'
+	pod 'DTOverlayController'
 end

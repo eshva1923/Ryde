@@ -42,12 +42,19 @@ internal class Authentication: NSObject, FUIAuthDelegate {
     }
 
     internal func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if let err = error, err.localizedDescription.contains("error 1") {
+            userCanceled()
+            return
+        }
         print(authDataResult);
     }
-    
+    internal func userCanceled() {
+        print("user canceled login")
+    }
     internal func logout() {
         try! ui.signOut()
     }
+
 
 }
 
