@@ -605,7 +605,7 @@
                         </connections>
                     </collectionView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Rides" selectedImage="direction" id="aPE-fb-ICH"/>
+                    <tabBarItem key="tabBarItem" title="Rides" image="direction" id="aPE-fb-ICH"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9J-x2-ewz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -740,11 +740,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-w9-dom">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                                <state key="normal" title="Like" image="like"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="like"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVf-3g-dIu">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                                <state key="normal" title="Ride it!" image="motorcycle"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="motorcycle"/>
                                             </button>
                                         </subviews>
                                         <constraints>

@@ -25,11 +25,19 @@ class RidesCollectionVC: UICollectionViewController {
     private func loadRides() {
         ridesArray.removeAll()
         //TESTING---
+        /*
         for _ in 0..<10 {
             ridesArray.append(RideModel.test())
         }
+ */
+        DataLayer.shared.getAllRides(callback: { allRides in
+            self.ridesArray = allRides
+            self.collectionView.reloadData()
+        }) {
+            print("OH FUCK")
+        }
         //---
-        collectionView.reloadData()
+        //collectionView.reloadData()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -76,8 +84,8 @@ class RideCollectionCell: CollectionViewSlantedCell {
     @IBOutlet var lbl_likes: UILabel!
 
     func setupWithModel(_ rideModel: RideModel) {
-        if let image = rideModel.image {
-            img_background.image = UIImage(imageLiteralResourceName: image)
+        if let image = rideModel.imageURL {
+            img_background.sd_setImage(with: URL(string: image), completed: nil)// UIImage(imageLiteralResourceName: image)
         }
 
         lbl_km.text = "\(rideModel.lenght) Km"

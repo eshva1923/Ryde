@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D035D6EC230C8212002C428F /* GoogleService-Info.plist */; };
+		D035D6EF230C9856002C428F /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D6EE230C9856002C428F /* DataLayer.swift */; };
 		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
 		D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A422E1D4F400CA7F70 /* meViewController.swift */; };
 		D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73709A622E1FD7B00CA7F70 /* Assets.xcassets */; };
-		D7566583230A85C7005C9132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7566582230A85C7005C9132 /* GoogleService-Info.plist */; };
 		D7566586230A8F70005C9132 /* SocialCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7566585230A8F70005C9132 /* SocialCollectionVC.swift */; };
 		D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659B230AD73E005C9132 /* EshToolBelt.swift */; };
 		D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */; };
@@ -26,11 +27,12 @@
 /* Begin PBXFileReference section */
 		0E0E20C019934B09179F0D4D /* Pods-Ryde.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ryde.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ryde/Pods-Ryde.release.xcconfig"; sourceTree = "<group>"; };
 		BF398BEF0C641E1F5C89F03C /* Pods-Ryde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ryde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ryde/Pods-Ryde.debug.xcconfig"; sourceTree = "<group>"; };
+		D035D6EC230C8212002C428F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D035D6EE230C9856002C428F /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		D73709A422E1D4F400CA7F70 /* meViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meViewController.swift; sourceTree = "<group>"; };
 		D73709A622E1FD7B00CA7F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D752904122A6745600B09412 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		D7566582230A85C7005C9132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7566585230A8F70005C9132 /* SocialCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCollectionVC.swift; sourceTree = "<group>"; };
 		D756659B230AD73E005C9132 /* EshToolBelt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EshToolBelt.swift; sourceTree = "<group>"; };
 		D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesCollectionVC.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				D73709A122E1D0C500CA7F70 /* Authentication.swift */,
 				D756659B230AD73E005C9132 /* EshToolBelt.swift */,
+				D035D6EE230C9856002C428F /* DataLayer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 				D7E2A7E62279DE8700B8EA8A /* UI */,
 				D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */,
 				D7E2A7E02279DE7B00B8EA8A /* Info.plist */,
-				D7566582230A85C7005C9132 /* GoogleService-Info.plist */,
+				D035D6EC230C8212002C428F /* GoogleService-Info.plist */,
 			);
 			path = Ryde;
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */,
-				D7566583230A85C7005C9132 /* GoogleService-Info.plist in Resources */,
+				D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */,
 				D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */,
 				D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */,
 			);
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75665A4230BDC9E005C9132 /* RideDetailedVC.swift in Sources */,
+				D035D6EF230C9856002C428F /* DataLayer.swift in Sources */,
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
 				D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */,
 				D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */,

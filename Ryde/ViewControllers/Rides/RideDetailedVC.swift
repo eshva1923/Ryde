@@ -21,12 +21,6 @@ class RideDetailedVC: UIViewController {
     @IBOutlet var lbl_composition: UILabel!
     @IBOutlet var collectionView: UICollectionView!
 
-    /*let composition: RoadComposition
-    let tags: [String]?
-    let done: Int
-    let likes: Int
-    let description: String
-*/
     private var thisRide: RideModel? = nil
 
     func setRide(_ ride: RideModel) {
@@ -39,8 +33,8 @@ class RideDetailedVC: UIViewController {
     }
     private func updateView() {
         if let ride = thisRide {
-            if let image = ride.image {
-                img_image.image = UIImage(imageLiteralResourceName: image)
+            if let image = ride.imageURL {
+                img_image.sd_setImage(with: URL(string: image), completed: nil)
             }
             lbl_title.text = ride.title
             lbl_description.text = ride.description
@@ -49,6 +43,7 @@ class RideDetailedVC: UIViewController {
             lbl_lenght.text = "\(ride.lenght) Km"
             lbl_tags.text = ride.tags?.joined(separator: ", ")
             lbl_composition.text = ride.composition.stringify()
+            lbl_difficulty.text = ride.stringifyDifficulty()
             collectionView.isHidden = (ride.photosURL == nil)
             collectionView.reloadData()
         }
@@ -66,7 +61,7 @@ extension RideDetailedVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RidePhotoCell", for: indexPath) as! RidePhotoCell
         if let ride = thisRide, ride.photosURL != nil {
-            cell.img_photoView.image = UIImage(imageLiteralResourceName: ride.photosURL![indexPath.row])
+            cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPath.row]), completed: nil)
         }
         return cell
     }
