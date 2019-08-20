@@ -50,6 +50,11 @@ struct Countries {
         return nil
     }
 }
+extension Countries {
+    static func stringifyRideCountries(_ rideModel: RideModel) -> String {
+        return rideModel.country.split(separator: "/").compactMap { self.getCountry(String($0))}.map { "\($0.flag) \($0.code2)"}.joined(separator: " / ")
+    }
+}
 struct Country {
     let flag: String
     let naturalName: String

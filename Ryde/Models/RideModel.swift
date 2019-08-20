@@ -19,6 +19,8 @@ struct RideModel {
     let tags: [String]?
     let done: Int
     let likes: Int
+    let description: String
+    let photosURL: [String]?
 
     static func test() -> RideModel{
         return RideModel(image: nil,
@@ -34,7 +36,14 @@ struct RideModel {
                                                       rocks: 0),
                          tags: ["Mountain", "Alps", "Summer"],
                          done: 3,
-                         likes: 7)
+                         likes: 7,
+                         description: "This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text. ",
+                         photosURL:  nil)
+    }
+
+    func stringifyDifficulty() -> String {
+        let diff = self.difficulty <= 5 ? self.difficulty : 5
+        return String(repeating: "✪ ", count: diff)
     }
 }
 

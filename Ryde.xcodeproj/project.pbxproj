@@ -15,6 +15,7 @@
 		D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659B230AD73E005C9132 /* EshToolBelt.swift */; };
 		D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */; };
 		D75665A2230AE50D005C9132 /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75665A1230AE50D005C9132 /* RideModel.swift */; };
+		D75665A4230BDC9E005C9132 /* RideDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75665A3230BDC9E005C9132 /* RideDetailedVC.swift */; };
 		D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */; };
 		D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */; };
 		D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E2A7D82279DE7900B8EA8A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		D756659B230AD73E005C9132 /* EshToolBelt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EshToolBelt.swift; sourceTree = "<group>"; };
 		D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesCollectionVC.swift; sourceTree = "<group>"; };
 		D75665A1230AE50D005C9132 /* RideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideModel.swift; sourceTree = "<group>"; };
+		D75665A3230BDC9E005C9132 /* RideDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailedVC.swift; sourceTree = "<group>"; };
 		D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D7E2A7D12279DE7900B8EA8A /* Ryde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */,
+				D75665A3230BDC9E005C9132 /* RideDetailedVC.swift */,
 			);
 			path = Rides;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75665A4230BDC9E005C9132 /* RideDetailedVC.swift in Sources */,
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
 				D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */,
 				D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */,

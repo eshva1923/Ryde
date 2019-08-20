@@ -9,26 +9,58 @@
 import Foundation
 import UIKit
 import CollectionViewSlantedLayout
+import SPStorkController
 
 class RidesCollectionVC: UICollectionViewController {
+    var ridesArray: Array<RideModel> = []
     override func viewDidLoad() {
         let layout = CollectionViewSlantedLayout()
         layout.isFirstCellExcluded = true
         layout.isLastCellExcluded = true
         layout.slantingSize = 40
+        loadRides()
         self.collectionView.collectionViewLayout = layout
         super.viewDidLoad()
-
+    }
+    private func loadRides() {
+        ridesArray.removeAll()
+        //TESTING---
+        for _ in 0..<10 {
+            ridesArray.append(RideModel.test())
+        }
+        //---
+        collectionView.reloadData()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return ridesArray.count
     }
+
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rideCollectionCell", for: indexPath) as! RideCollectionCell
-        cell.setupWithModel(RideModel.test())
+        cell.setupWithModel(ridesArray[indexPath.row])
         return cell
     }
+}
+
+extension RidesCollectionVC {
+
+    private func openAsStork(_ vc: RideDetailedVC) {
+        let transitionDelegate = SPStorkTransitioningDelegate()
+        vc.transitioningDelegate = transitionDelegate
+        vc.modalPresentationStyle = .custom
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        transitionDelegate.customHeight = UIScreen.main.bounds.height*0.75
+
+        self.present(vc, animated: true, completion: nil)
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc: RideDetailedVC = storyboard?.instantiateViewController(withIdentifier: "RidesDetailed") as? RideDetailedVC {
+            vc.setRide(ridesArray[indexPath.row])
+            openAsStork(vc)
+        }
+    }
+
 }
 
 class RideCollectionCell: CollectionViewSlantedCell {
@@ -46,20 +78,17 @@ class RideCollectionCell: CollectionViewSlantedCell {
     func setupWithModel(_ rideModel: RideModel) {
         if let image = rideModel.image {
             img_background.image = UIImage(imageLiteralResourceName: image)
-        } else {
-            //default here
-            img_background.image = UIImage(imageLiteralResourceName: "sylvain-sarrailh-cricketstory")
         }
+
         lbl_km.text = "\(rideModel.lenght) Km"
         lbl_title.text = rideModel.title
         lbl_author.text = rideModel.author
-        lbl_difficulty.text = String(repeating: "✪ ", count: rideModel.difficulty)
+        lbl_difficulty.text = rideModel.stringifyDifficulty()
         lbl_composition.text = rideModel.composition.stringify()
         lbl_tags.text = rideModel.tags?.joined(separator: ", ")
-        lbl_country.text = rideModel.country.split(separator: "/").compactMap { Countries.getCountry(String($0))}.map { "\($0.flag) \($0.code2)"}.joined(separator: " / ")
+        lbl_country.text = Countries.stringifyRideCountries(rideModel)
         lbl_likes.text = "\(rideModel.likes)"
         lbl_done.text = "\(rideModel.done)"
-
     }
 
 }
