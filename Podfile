@@ -17,5 +17,8 @@ target 'Ryde' do
 	pod 'CollectionViewSlantedLayout', '~> 3.1'
 	pod 'SPStorkController'
 	pod 'CircleMenu'
-#	pod 'GDGauge'
+pod 'SearchTextField'
+pod 'SPAlert'
+pod 'SPPermission'
+
 end
