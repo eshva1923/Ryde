@@ -42,7 +42,7 @@ struct RideModel: DataModel {
         return RideModel(imageURL: nil,
                          title: "Test Ride",
                          author: "testAuthor",
-                         country: "🇫🇷/IT",
+                         country: "🇫🇷-IT",
                          lenght: 450.45,
                          difficulty: 3,
                          composition: RoadComposition(street: 50,

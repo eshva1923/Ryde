@@ -27,7 +27,7 @@ class DataLayer {
                 var returningRides:[RideModel] = []
                 for document in querySnapshot!.documents {
                     returningRides.append(RideModel.mapFromDocument(document.data()))
-                    print("\(document.documentID) => \(document.data())")
+                    //print("\(document.documentID) => \(document.data())")
                 }
                 callback(returningRides)
             }

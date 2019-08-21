@@ -39,7 +39,7 @@ class RideDetailedVC: UIViewController {
             lbl_title.text = ride.title
             lbl_description.text = ride.description
             lbl_author.text = ride.author
-            lbl_country.text = Countries.stringifyRideCountries(ride)
+            lbl_country.text = Countries.stringifyRideCountries(ride, mode: .code3, withFlag: true)
             lbl_lenght.text = "\(ride.lenght) Km"
             lbl_tags.text = ride.tags?.joined(separator: ", ")
             lbl_composition.text = ride.composition.stringify()
@@ -52,17 +52,31 @@ class RideDetailedVC: UIViewController {
 
 extension RideDetailedVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let ride = thisRide, ride.photosURL != nil{
-            return ride.photosURL!.count
+        var count = 0
+        guard let ride = thisRide else { return count }
+        if ride.imageURL != nil {
+            count = 1
         }
-        return 0
+        return ride.photosURL != nil ? count + ride.photosURL!.count : count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RidePhotoCell", for: indexPath) as! RidePhotoCell
-        if let ride = thisRide, ride.photosURL != nil {
-            cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPath.row]), completed: nil)
+        guard let ride = thisRide else { return cell }
+        var indexPathRow = indexPath.row
+        if let mainImage = ride.imageURL {
+            if indexPathRow == 0 {
+                cell.img_photoView.sd_setImage(with: URL(string: mainImage)!, completed: nil)
+                return cell
+            } else {
+                indexPathRow = indexPathRow - 1
+            }
         }
+        
+        if ride.photosURL != nil {
+            cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPathRow]), completed: nil)
+        }
+        
         return cell
     }
 }

@@ -178,6 +178,11 @@ PODS:
   - SDWebImage (4.4.4):
     - SDWebImage/Core (= 4.4.4)
   - SDWebImage/Core (4.4.4)
+  - SearchTextField (1.2.4)
+  - SPAlert (1.1.1)
+  - SPPermission (4.0.5):
+    - SPPermission/Core (= 4.0.5)
+  - SPPermission/Core (4.0.5)
   - SPStorkController (1.7.7)
   - TwitterCore (3.2.0)
   - TwitterKit (3.4.2):
@@ -191,6 +196,9 @@ DEPENDENCIES:
   - Firebase/Core
   - FirebaseUI
   - GoogleSignIn
+  - SearchTextField
+  - SPAlert
+  - SPPermission
   - SPStorkController
 
 SPEC REPOS:
@@ -222,6 +230,9 @@ SPEC REPOS:
     - nanopb
     - Protobuf
     - SDWebImage
+    - SearchTextField
+    - SPAlert
+    - SPPermission
     - SPStorkController
     - TwitterCore
     - TwitterKit
@@ -254,10 +265,13 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+  SPAlert: 292690a27df49ff131d532a0a39d89b08dd93e4d
+  SPPermission: ef54994522bdf471ce1fe6aea267bf471a9de701
   SPStorkController: 864d63ba3a689778a3739e0627d0711c72ef7965
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 03c2cc527874e99e57d7d61d582e8c23354b4412
+PODFILE CHECKSUM: 057b01ddb0775d1efcd4172bb34b8e9f8d94b985
 
 COCOAPODS: 1.7.5

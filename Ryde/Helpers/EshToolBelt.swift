@@ -81,10 +81,32 @@ struct Countries {
     }
 }
 extension Countries {
-    static func stringifyRideCountries(_ rideModel: RideModel) -> String {
-        return rideModel.country.split(separator: "/").compactMap {
-            self.getCountry(String($0))}.map { "\($0.flag) \($0.code2)"
-            }.joined(separator: " / ")
+    static func stringifyRideCountries(_ rideModel: RideModel, mode: CountriesStringMode = .noText, withFlag: Bool = true) -> String {
+        let countries = rideModel.country.split(separator: ",").compactMap { self.getCountry(String($0))}
+        switch mode {
+        case .noText:
+            return countries.map{ "\($0.flag)" }.joined(separator: " / ")
+        case .code3:
+            if withFlag { return countries.map{ "\($0.flag) \($0.code3)" }.joined(separator: " / ")}
+            return countries.map{ "\($0.code3)" }.joined(separator: " / ")
+        case .code2:
+            if withFlag { return countries.map{ "\($0.flag) \($0.code2)" }.joined(separator: " / ")}
+            return countries.map{ "\($0.code2)" }.joined(separator: " / ")
+        case .naturalName:
+            if withFlag { return countries.map{ "\($0.flag) \($0.naturalName)" }.joined(separator: " / ")}
+            return countries.map{ "\($0.naturalName)" }.joined(separator: " / ")
+        case .englishName:
+            if withFlag { return countries.map{ "\($0.flag) \($0.englishName)" }.joined(separator: " / ")}
+            return countries.map{ "\($0.englishName)" }.joined(separator: " / ")
+        }
+        
+    }
+    enum CountriesStringMode {
+        case noText
+        case code3
+        case code2
+        case naturalName
+        case englishName
     }
 }
 struct Country {
