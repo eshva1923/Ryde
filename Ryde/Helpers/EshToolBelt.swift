@@ -9,6 +9,27 @@
 import Foundation
 import UIKit
 
+struct DateHelper {
+    private static let formatter = DateFormatter()
+    static func format(date: Date) -> String {
+        formatter.dateFormat = "dd-MM-yy"
+        return formatter.string(from: date)
+    }
+    static func format(string: String) -> Date? {
+        return formatter.date(from: string) ?? nil
+    }
+    static func elapsedFuzzyTime(from: Date) -> String {
+        let components = Calendar.current.dateComponents([.hour, .day, .month], from: from, to: Date())
+        let hours = components.hour ?? 0
+        let days = components.day ?? 0
+        let months = components.month ?? 0
+
+        if months > 6 {return "More than 6 months ago"}
+        if months > 1 {return "\(months) months ago"}
+        if days > 0 { return "\(days) days ago"}
+        return "\(hours) hours ago"
+    }
+}
 struct Countries {
     static private let allCountries = [
         Country(flag: "🇮🇹", naturalName: "Italia", englishName: "Italy", code2: "IT", code3: "ITA"),
@@ -52,6 +73,7 @@ struct Countries {
         Country(flag: "🇧🇪", naturalName: "Belgique", englishName: "Belgium", code2: "BE", code3: "BEL"),
         Country(flag: "🇦🇱", naturalName: "Shqiperi", englishName: "Albania", code2: "AL", code3: "ALB"),
         Country(flag: "🇹🇷", naturalName: "Turkiye", englishName: "Turkey", code2: "TR", code3: "TUR"),
+        Country(flag: "🇪🇺", naturalName: "Europe", englishName: "Europe", code2: "EU", code3: "EUR")
     ]
     static private func getCountryBy(code: String) -> Country? {
         if code.count == 3 {

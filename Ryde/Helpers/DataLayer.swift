@@ -12,6 +12,7 @@ import Firebase
 protocol DataModel {
     static var collectionName: String { get }
     static func mapFromDocument(_ document: [String: Any]) -> Self
+    static func test() -> Self
 }
 
 class DataLayer {
