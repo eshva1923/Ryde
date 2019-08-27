@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-protocol DataModel {
+protocol DataModel { 
     static var collectionName: String { get }
     static func mapFromDocument(_ document: [String: Any]) -> Self
     static func test() -> Self
@@ -19,19 +19,44 @@ class DataLayer {
     static let shared = DataLayer()
     private let db = Firestore.firestore()
     
-    func getAllRides(offset: Int = 0 , limit: Int = 0, callback: @escaping ([RideModel]) -> Void, errorBlock: @escaping ()->Void ) {
-        db.collection(RideModel.collectionName).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
+    func getAllDocuments(ofType type: DataModel.Type, offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([DataModel]) -> Void, errorBlock: @escaping () -> Void) {
+        db.collection(type.collectionName).getDocuments { (querySnapshot, error) in
+            guard error == nil else {
+                print("Error getting docs! \(error!.localizedDescription)")
                 errorBlock()
-            } else {
-                var returningRides:[RideModel] = []
-                for document in querySnapshot!.documents {
-                    returningRides.append(RideModel.mapFromDocument(document.data()))
-                    //print("\(document.documentID) => \(document.data())")
-                }
-                callback(returningRides)
+                return
             }
+            //var returning:[type.self] = []
+            guard let snapshot = querySnapshot else { completionBlock([]); return }
+            var returning:[DataModel] = []
+            for document in snapshot.documents {
+                returning.append(type.mapFromDocument(document.data()))
+            }
+            completionBlock(returning)
+            
+        }
+    }
+}
+//stories
+extension DataLayer {
+    func getAllStories(offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([StoryModel]) -> Void) {
+        getAllDocuments(ofType: StoryModel.self, offset: offset, limit: limit, completionBlock: { stories in
+            guard let allStories = stories as? [StoryModel] else {print("error!"); return}
+            completionBlock(allStories)
+        }) {
+            ////
+        }
+    }
+}
+
+//rides
+extension DataLayer {
+    func getAllRides(offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([RideModel]) -> Void) {
+        getAllDocuments(ofType: RideModel.self, offset: offset, limit: limit, completionBlock: { rides in
+            guard let allRides = rides as? [RideModel] else { print("error!"); return }
+            completionBlock(allRides)
+        }) {
+            ////
         }
     }
 }

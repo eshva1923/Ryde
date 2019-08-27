@@ -30,14 +30,10 @@ class RidesCollectionVC: UICollectionViewController {
             ridesArray.append(RideModel.test())
         }
  */
-        DataLayer.shared.getAllRides(callback: { allRides in
+        DataLayer.shared.getAllRides { allRides in
             self.ridesArray = allRides
             self.collectionView.reloadData()
-        }) {
-            print("OH FUCK")
         }
-        //---
-        //collectionView.reloadData()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,7 +54,7 @@ extension RidesCollectionVC {
         vc.transitioningDelegate = transitionDelegate
         vc.modalPresentationStyle = .custom
         vc.modalPresentationCapturesStatusBarAppearance = true
-        transitionDelegate.customHeight = UIScreen.main.bounds.height*0.75
+        transitionDelegate.customHeight = UIScreen.main.bounds.height * 0.75
 
         self.present(vc, animated: true, completion: nil)
     }
@@ -85,7 +81,7 @@ class RideCollectionCell: CollectionViewSlantedCell {
 
     func setupWithModel(_ rideModel: RideModel) {
         if let image = rideModel.imageURL {
-            img_background.sd_setImage(with: URL(string: image), completed: nil)// UIImage(imageLiteralResourceName: image)
+            img_background.sd_setImage(with: URL(string: image), completed: nil)
         }
 
         lbl_km.text = "\(rideModel.lenght) Km"
@@ -98,5 +94,4 @@ class RideCollectionCell: CollectionViewSlantedCell {
         lbl_likes.text = "\(rideModel.likes)"
         lbl_done.text = "\(rideModel.done)"
     }
-
 }

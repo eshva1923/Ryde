@@ -9,6 +9,7 @@
 import Foundation
 
 struct StoryModel: DataModel {
+    
     static var collectionName = "stories"
 
     let coverImage: String
