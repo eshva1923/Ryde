@@ -80,9 +80,7 @@ class RideCollectionCell: CollectionViewSlantedCell {
     @IBOutlet var lbl_likes: UILabel!
 
     func setupWithModel(_ rideModel: RideModel) {
-        if let image = rideModel.imageURL {
-            img_background.sd_setImage(with: URL(string: image), completed: nil)
-        }
+        img_background.sd_setImage(with: rideModel.getCoverImageReference()!)
 
         lbl_km.text = "\(rideModel.lenght) Km"
         lbl_title.text = rideModel.title

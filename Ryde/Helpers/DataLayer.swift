@@ -11,6 +11,7 @@ import Firebase
 
 protocol DataModel { 
     static var collectionName: String { get }
+    static var imagesCollectionName: String { get }
     static func mapFromDocument(_ document: [String: Any]) -> Self
     static func test() -> Self
 }

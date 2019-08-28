@@ -711,6 +711,10 @@
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="3MH-RW-1tK" id="2uL-sT-a8B"/>
+                                                        <outlet property="delegate" destination="3MH-RW-1tK" id="K9O-EN-tTE"/>
+                                                    </connections>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag, Tag, Tag, Tag, Tag, Tag, " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnN-H9-rfz">
                                                     <rect key="frame" x="0.0" y="371" width="398" height="18"/>

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class RideDetailedVC: UIViewController {
     @IBOutlet var lbl_title: UILabel!
@@ -22,9 +23,11 @@ class RideDetailedVC: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
 
     private var thisRide: RideModel? = nil
+    private var otherImagesRef:[StorageReference] = []
 
     func setRide(_ ride: RideModel) {
         thisRide = ride
+        otherImagesRef = thisRide!.getPhotosReferences()
     }
     override func viewDidLoad() {
         collectionView.dataSource = self
@@ -33,9 +36,10 @@ class RideDetailedVC: UIViewController {
     }
     private func updateView() {
         if let ride = thisRide {
-            if let image = ride.imageURL {
-                img_image.sd_setImage(with: URL(string: image), completed: nil)
+            if let image = ride.coverImage {
+                
             }
+            img_image.sd_setImage(with: ride.getCoverImageReference()!)
             lbl_title.text = ride.title
             lbl_description.text = ride.description
             lbl_author.text = ride.author
@@ -44,7 +48,7 @@ class RideDetailedVC: UIViewController {
             lbl_tags.text = ride.tags?.joined(separator: ", ")
             lbl_composition.text = ride.composition.stringify()
             lbl_difficulty.text = ride.stringifyDifficulty()
-            collectionView.isHidden = (ride.photosURL == nil)
+            collectionView.isHidden = ride.otherImages.count == 0
             collectionView.reloadData()
         }
     }
@@ -54,28 +58,31 @@ extension RideDetailedVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var count = 0
         guard let ride = thisRide else { return count }
-        if ride.imageURL != nil {
+        if ride.coverImage != nil {
             count = 1
         }
-        return ride.photosURL != nil ? count + ride.photosURL!.count : count
+        return otherImagesRef.count != 0 ? count + otherImagesRef.count : count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RidePhotoCell", for: indexPath) as! RidePhotoCell
         guard let ride = thisRide else { return cell }
         var indexPathRow = indexPath.row
-        if let mainImage = ride.imageURL {
+        if ride.coverImage != nil {
             if indexPathRow == 0 {
-                cell.img_photoView.sd_setImage(with: URL(string: mainImage)!, completed: nil)
+                cell.img_photoView.sd_setImage(with: ride.getCoverImageReference()!)
                 return cell
             } else {
                 indexPathRow = indexPathRow - 1
             }
         }
         
-        if ride.photosURL != nil {
-            cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPathRow]), completed: nil)
-        }
+        /*DispatchQueue.main.async {
+            cell.img_photoView.sd_setImage(with: self.otherImagesRef[indexPathRow])
+        }*/
+        cell.img_photoView.sd_setImage(with: self.otherImagesRef[indexPathRow])
+        
+        //cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPathRow]), completed: nil)
         
         return cell
     }

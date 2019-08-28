@@ -10,8 +10,9 @@ import Foundation
 
 struct RideModel: DataModel {
     static var collectionName = "rides"
+    static var imagesCollectionName = "ridesPhotos"
     
-    let imageURL: String?
+    let coverImage: String?
     let title: String
     let author: String
     let country: String
@@ -22,10 +23,10 @@ struct RideModel: DataModel {
     let done: Int
     let likes: Int
     let description: String
-    let photosURL: [String]?
+    let otherImages: [String]
 
     static func mapFromDocument(_ document: [String : Any]) -> RideModel {
-        return RideModel(imageURL: document["imageURL"] as? String,
+        return RideModel(coverImage: document["coverImage"] as? String,
                          title: document["title"] as! String,
                          author: "document[\"author\"] as! String",
                          country: document["country"] as! String,
@@ -36,10 +37,10 @@ struct RideModel: DataModel {
                          done: document["done"] as! Int,
                          likes: document["likes"] as! Int,
                          description: document["description"] as! String,
-                         photosURL: document["photosURL"] as? Array<String>)
+                         otherImages: document["otherImages"] as! Array<String>)
     }
     static func test() -> RideModel{
-        return RideModel(imageURL: nil,
+        return RideModel(coverImage: nil,
                          title: "Test Ride",
                          author: "testAuthor",
                          country: "🇫🇷-IT",
@@ -54,7 +55,7 @@ struct RideModel: DataModel {
                          done: 3,
                          likes: 7,
                          description: "This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text.This is a test ride, and this description is just some random text. ",
-                         photosURL:  nil)
+                         otherImages:  [])
     }
 
     func stringifyDifficulty() -> String {

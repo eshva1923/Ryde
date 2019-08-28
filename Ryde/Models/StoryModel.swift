@@ -10,7 +10,8 @@ import Foundation
 
 struct StoryModel: DataModel {
     
-    static var collectionName = "stories"
+    internal static var collectionName = "stories"
+    internal static var imagesCollectionName = "ridesPhotos"
 
     let coverImage: String
     let title: String
@@ -21,7 +22,7 @@ struct StoryModel: DataModel {
     let rides: [String]?
     let likes: Int
     let writtenOn: Date
-    let storyPhotos: [String]?
+    let storyPhotos: [String]
 
     static func test() -> StoryModel {
         return StoryModel(coverImage: "NONE",
@@ -33,7 +34,7 @@ struct StoryModel: DataModel {
                           rides: ["ride1", "ride2"],
                           likes: 6,
                           writtenOn: Date(),
-                          storyPhotos: nil)
+                          storyPhotos: [])
     }
     static func mapFromDocument(_ document: [String : Any]) -> StoryModel {
         return test()

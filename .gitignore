@@ -1,2 +1,4 @@
 Ryde/GoogleService-Info.plist
+.DS_Store
+Ryde.xcworkspace/xcuserdata
 Pods
