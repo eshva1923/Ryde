@@ -51,7 +51,7 @@ class StoryCell: CollectionViewSlantedCell {
         img_background.sd_setImage(with: model.getCoverImageReference())
         lbl_title.text = model.title
         lbl_underText.text = model.description
-        //lbl_author.text = model.author!. //model.author?.documentID
+
         model.getAuthorName { authorName in
             self.lbl_author.text = authorName
         }
