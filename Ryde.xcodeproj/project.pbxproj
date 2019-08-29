@@ -10,6 +10,8 @@
 		D028F34D23145B890031892E /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F34C23145B890031892E /* StoryModel.swift */; };
 		D028F34F2316ED6C0031892E /* StorageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F34E2316ED6C0031892E /* StorageLayer.swift */; };
 		D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F3512317B9590031892E /* StoriesCollectionVC.swift */; };
+		D028F3542317DCB60031892E /* StoryDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F3532317DCB60031892E /* StoryDetailedVC.swift */; };
+		D028F356231804860031892E /* PopupImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F355231804860031892E /* PopupImageViewController.swift */; };
 		D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D035D6EC230C8212002C428F /* GoogleService-Info.plist */; };
 		D035D6EF230C9856002C428F /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D6EE230C9856002C428F /* DataLayer.swift */; };
 		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
@@ -32,6 +34,8 @@
 		D028F34C23145B890031892E /* StoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		D028F34E2316ED6C0031892E /* StorageLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageLayer.swift; sourceTree = "<group>"; };
 		D028F3512317B9590031892E /* StoriesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionVC.swift; sourceTree = "<group>"; };
+		D028F3532317DCB60031892E /* StoryDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailedVC.swift; sourceTree = "<group>"; };
+		D028F355231804860031892E /* PopupImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupImageViewController.swift; sourceTree = "<group>"; };
 		D035D6EC230C8212002C428F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D035D6EE230C9856002C428F /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D028F3512317B9590031892E /* StoriesCollectionVC.swift */,
+				D028F3532317DCB60031892E /* StoryDetailedVC.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				D756659D230ADBB5005C9132 /* Rides */,
 				D7566584230A8F57005C9132 /* Social */,
 				D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */,
+				D028F355231804860031892E /* PopupImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
 				D028F34F2316ED6C0031892E /* StorageLayer.swift in Sources */,
 				D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */,
+				D028F356231804860031892E /* PopupImageViewController.swift in Sources */,
+				D028F3542317DCB60031892E /* StoryDetailedVC.swift in Sources */,
 				D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */,
 				D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */,
 				D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */,

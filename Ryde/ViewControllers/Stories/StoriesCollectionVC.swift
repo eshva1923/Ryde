@@ -38,6 +38,12 @@ class StoriesCollectionVC: UICollectionViewController {
         cell.setupWithModel(storiesArray[indexPath.row])
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "storiesCollectionVC_storyDetailedVC", let destination = segue.destination as? StoryDetailedVC, let selectedStory = (sender as? StoryCell)?.thisModel {
+            destination.setStory(selectedStory)
+        }
+    }
 }
 
 class StoryCell: CollectionViewSlantedCell {
@@ -46,8 +52,10 @@ class StoryCell: CollectionViewSlantedCell {
     @IBOutlet var lbl_underText: UILabel!
     @IBOutlet var lbl_author: UILabel!
     @IBOutlet var lbl_rides: UILabel!
+    var thisModel: StoryModel? = nil
     
     func setupWithModel (_ model: StoryModel) {
+        thisModel = model
         img_background.sd_setImage(with: model.getCoverImageReference())
         lbl_title.text = model.title
         lbl_underText.text = model.description
