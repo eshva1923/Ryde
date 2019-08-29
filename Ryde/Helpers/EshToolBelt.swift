@@ -103,9 +103,20 @@ struct Countries {
     }
 }
 extension Countries {
-    static func stringifyRideCountries(_ rideModel: RideModel, mode: CountriesStringMode = .noText, withFlag: Bool = true) -> String {
+    static func stringifyRideCountries(_ rideModel: RideModel, mode: CountriesStringMode = .noText, withFlag: Bool = true, adaptive: Bool = true) -> String {
+        var selectedMode = mode
+        if adaptive {
+            switch rideModel.country.split(separator: ",").count {
+            case 1:
+                selectedMode = .englishName
+            case 2:
+                selectedMode = .code3
+            default:
+                selectedMode = .noText
+            }
+        }
         let countries = rideModel.country.split(separator: ",").compactMap { self.getCountry(String($0))}
-        switch mode {
+        switch selectedMode {
         case .noText:
             return countries.map{ "\($0.flag)" }.joined(separator: " / ")
         case .code3:
@@ -121,8 +132,8 @@ extension Countries {
             if withFlag { return countries.map{ "\($0.flag) \($0.englishName)" }.joined(separator: " / ")}
             return countries.map{ "\($0.englishName)" }.joined(separator: " / ")
         }
-        
     }
+    
     enum CountriesStringMode {
         case noText
         case code3

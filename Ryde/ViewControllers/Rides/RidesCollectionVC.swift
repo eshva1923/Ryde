@@ -87,7 +87,7 @@ class RideCollectionCell: CollectionViewSlantedCell {
         lbl_author.text = rideModel.author
         lbl_difficulty.text = rideModel.stringifyDifficulty()
         lbl_composition.text = rideModel.composition.stringify()
-        lbl_tags.text = rideModel.tags?.joined(separator: ", ")
+        lbl_tags.text = rideModel.tags.joined(separator: ", ")
         lbl_country.text = Countries.stringifyRideCountries(rideModel)
         lbl_likes.text = "\(rideModel.likes)"
         lbl_done.text = "\(rideModel.done)"

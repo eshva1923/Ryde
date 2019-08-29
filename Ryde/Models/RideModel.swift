@@ -19,7 +19,7 @@ struct RideModel: DataModel {
     let lenght: Double
     let difficulty: Int
     let composition: RoadComposition
-    let tags: [String]?
+    let tags: [String]
     let done: Int
     let likes: Int
     let description: String
@@ -33,7 +33,7 @@ struct RideModel: DataModel {
                          lenght: document["lenght"] as! Double,
                          difficulty: document["difficulty"] as! Int,
                          composition: RoadComposition.mapFromDictionary(document["composition"] as! NSDictionary),
-                         tags: nil,
+                         tags: (document["tags"] as! String).components(separatedBy: ","),
                          done: document["done"] as! Int,
                          likes: document["likes"] as! Int,
                          description: document["description"] as! String,

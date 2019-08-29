@@ -36,16 +36,15 @@ class RideDetailedVC: UIViewController {
     }
     private func updateView() {
         if let ride = thisRide {
-            if let image = ride.coverImage {
-                
+            if ride.coverImage != nil {
+                img_image.sd_setImage(with: ride.getCoverImageReference()!)
             }
-            img_image.sd_setImage(with: ride.getCoverImageReference()!)
             lbl_title.text = ride.title
             lbl_description.text = ride.description
             lbl_author.text = ride.author
             lbl_country.text = Countries.stringifyRideCountries(ride, mode: .code3, withFlag: true)
             lbl_lenght.text = "\(ride.lenght) Km"
-            lbl_tags.text = ride.tags?.joined(separator: ", ")
+            lbl_tags.text = ride.tags.joined(separator: ", ")
             lbl_composition.text = ride.composition.stringify()
             lbl_difficulty.text = ride.stringifyDifficulty()
             collectionView.isHidden = ride.otherImages.count == 0
@@ -77,12 +76,7 @@ extension RideDetailedVC: UICollectionViewDelegate, UICollectionViewDataSource {
             }
         }
         
-        /*DispatchQueue.main.async {
-            cell.img_photoView.sd_setImage(with: self.otherImagesRef[indexPathRow])
-        }*/
         cell.img_photoView.sd_setImage(with: self.otherImagesRef[indexPathRow])
-        
-        //cell.img_photoView.sd_setImage(with: URL(string: ride.photosURL![indexPathRow]), completed: nil)
         
         return cell
     }
