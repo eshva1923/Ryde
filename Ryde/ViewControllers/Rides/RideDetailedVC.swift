@@ -80,6 +80,16 @@ extension RideDetailedVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedImageRef = indexPath.row == 0 ? thisRide?.getCoverImageReference() : otherImagesRef[indexPath.row - 1]
+        performSegue(withIdentifier: "rideDetail_popupImage", sender: selectedImageRef)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "rideDetail_popupImage", let destination = segue.destination as? PopupImageViewController, let selectedImageReference = sender as? StorageReference {
+            destination.imageReference = selectedImageReference
+        }
+    }
 }
 
 class RidePhotoCell: UICollectionViewCell {
