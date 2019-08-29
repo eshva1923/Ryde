@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		D028F34D23145B890031892E /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F34C23145B890031892E /* StoryModel.swift */; };
 		D028F34F2316ED6C0031892E /* StorageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F34E2316ED6C0031892E /* StorageLayer.swift */; };
+		D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F3512317B9590031892E /* StoriesCollectionVC.swift */; };
 		D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D035D6EC230C8212002C428F /* GoogleService-Info.plist */; };
 		D035D6EF230C9856002C428F /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D6EE230C9856002C428F /* DataLayer.swift */; };
 		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
 		D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A422E1D4F400CA7F70 /* meViewController.swift */; };
 		D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73709A622E1FD7B00CA7F70 /* Assets.xcassets */; };
-		D7566586230A8F70005C9132 /* SocialCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7566585230A8F70005C9132 /* SocialCollectionVC.swift */; };
 		D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659B230AD73E005C9132 /* EshToolBelt.swift */; };
 		D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */; };
 		D75665A2230AE50D005C9132 /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75665A1230AE50D005C9132 /* RideModel.swift */; };
@@ -31,13 +31,13 @@
 		BF398BEF0C641E1F5C89F03C /* Pods-Ryde.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ryde.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ryde/Pods-Ryde.debug.xcconfig"; sourceTree = "<group>"; };
 		D028F34C23145B890031892E /* StoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		D028F34E2316ED6C0031892E /* StorageLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageLayer.swift; sourceTree = "<group>"; };
+		D028F3512317B9590031892E /* StoriesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionVC.swift; sourceTree = "<group>"; };
 		D035D6EC230C8212002C428F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D035D6EE230C9856002C428F /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		D73709A422E1D4F400CA7F70 /* meViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meViewController.swift; sourceTree = "<group>"; };
 		D73709A622E1FD7B00CA7F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D752904122A6745600B09412 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		D7566585230A8F70005C9132 /* SocialCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCollectionVC.swift; sourceTree = "<group>"; };
 		D756659B230AD73E005C9132 /* EshToolBelt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EshToolBelt.swift; sourceTree = "<group>"; };
 		D756659E230ADBC5005C9132 /* RidesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesCollectionVC.swift; sourceTree = "<group>"; };
 		D75665A1230AE50D005C9132 /* RideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideModel.swift; sourceTree = "<group>"; };
@@ -81,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D028F3502317B9380031892E /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				D028F3512317B9590031892E /* StoriesCollectionVC.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
 		D73709A022E1D0AD00CA7F70 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				D73709A322E1D4D700CA7F70 /* me */,
-				D7566585230A8F70005C9132 /* SocialCollectionVC.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 		D7E2A7E72279DE9F00B8EA8A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D028F3502317B9380031892E /* Stories */,
 				D756659D230ADBB5005C9132 /* Rides */,
 				D7566584230A8F57005C9132 /* Social */,
 				D7ADFC81228D779900DCDFBF /* MainTabBarController.swift */,
@@ -317,11 +325,11 @@
 				D035D6EF230C9856002C428F /* DataLayer.swift in Sources */,
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
 				D028F34F2316ED6C0031892E /* StorageLayer.swift in Sources */,
+				D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */,
 				D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */,
 				D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */,
 				D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */,
 				D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */,
-				D7566586230A8F70005C9132 /* SocialCollectionVC.swift in Sources */,
 				D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */,
 				D028F34D23145B890031892E /* StoryModel.swift in Sources */,
 				D75665A2230AE50D005C9132 /* RideModel.swift in Sources */,

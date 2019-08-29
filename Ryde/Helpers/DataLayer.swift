@@ -20,24 +20,32 @@ class DataLayer {
     static let shared = DataLayer()
     private let db = Firestore.firestore()
     
-    func getAllDocuments(ofType type: DataModel.Type, offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([DataModel]) -> Void, errorBlock: @escaping () -> Void) {
+    private func getAllDocuments(ofType type: DataModel.Type, offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([DataModel]) -> Void, errorBlock: @escaping () -> Void) {
         db.collection(type.collectionName).getDocuments { (querySnapshot, error) in
             guard error == nil else {
                 print("Error getting docs! \(error!.localizedDescription)")
                 errorBlock()
                 return
             }
-            //var returning:[type.self] = []
             guard let snapshot = querySnapshot else { completionBlock([]); return }
             var returning:[DataModel] = []
             for document in snapshot.documents {
                 returning.append(type.mapFromDocument(document.data()))
             }
             completionBlock(returning)
-            
+        }
+    }
+    
+    private func getDocumentsBy(reference: DocumentReference, ofType type: DataModel.Type, completionBlock: @escaping (DataModel?) -> Void) {
+        reference.getDocument { (document, error) in
+            guard error == nil else { print("oh shit \(error!.localizedDescription)"); completionBlock(nil); return}
+            if let document = document, document.exists {
+                completionBlock(type.mapFromDocument(document.data()!))
+            }
         }
     }
 }
+
 //stories
 extension DataLayer {
     func getAllStories(offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([StoryModel]) -> Void) {
@@ -49,6 +57,20 @@ extension DataLayer {
         }
     }
 }
+extension StoryModel {
+    func loadRides(completionBlock:@escaping (RideModel?)->Void) {
+        for ride in rides {
+            DataLayer.shared.getRideBy(reference: ride, completionBlock: completionBlock)
+        }
+    }
+    func getAuthorName(completionBlock: @escaping (String?)->Void) {
+        author!.getDocument { (document, error) in
+            guard error == nil, let doc = document, doc.exists else { return }
+            completionBlock(doc.data()! ["displayName"] as? String)
+        }
+    }
+}
+
 
 //rides
 extension DataLayer {
@@ -59,5 +81,8 @@ extension DataLayer {
         }) {
             ////
         }
+    }
+    func getRideBy(reference: DocumentReference, completionBlock: @escaping ((RideModel?) -> Void)) {
+        getDocumentsBy(reference: reference, ofType: RideModel.self, completionBlock: completionBlock as! (DataModel?) -> Void)
     }
 }
