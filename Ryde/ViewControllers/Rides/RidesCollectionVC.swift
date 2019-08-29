@@ -24,12 +24,6 @@ class RidesCollectionVC: UICollectionViewController {
     }
     private func loadRides() {
         ridesArray.removeAll()
-        //TESTING---
-        /*
-        for _ in 0..<10 {
-            ridesArray.append(RideModel.test())
-        }
- */
         DataLayer.shared.getAllRides { allRides in
             self.ridesArray = allRides
             self.collectionView.reloadData()
