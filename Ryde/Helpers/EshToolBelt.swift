@@ -30,6 +30,7 @@ struct DateHelper {
         return "\(hours) hours ago"
     }
 }
+//MARK: - Countries
 struct Countries {
     static private let allCountries = [
         Country(flag: "🇮🇹", naturalName: "Italia", englishName: "Italy", code2: "IT", code3: "ITA"),
@@ -150,6 +151,7 @@ struct Country {
     let code3: String
 }
 
+// MARK: - GradientView
 @IBDesignable
 class GradientView: UIView {
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}

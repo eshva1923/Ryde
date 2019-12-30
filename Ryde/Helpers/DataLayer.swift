@@ -16,6 +16,7 @@ protocol DataModel {
     static func test() -> Self
 }
 
+//MARK: - Datalayer
 class DataLayer {
     static let shared = DataLayer()
     private let db = Firestore.firestore()
@@ -46,7 +47,7 @@ class DataLayer {
     }
 }
 
-//stories
+//MARK: - Stories
 extension DataLayer {
     func getAllStories(offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([StoryModel]) -> Void) {
         getAllDocuments(ofType: StoryModel.self, offset: offset, limit: limit, completionBlock: { stories in
@@ -72,7 +73,7 @@ extension StoryModel {
 }
 
 
-//rides
+//MARK: - Rides
 extension DataLayer {
     func getAllRides(offset: UInt = 0, limit: UInt = 0, completionBlock: @escaping ([RideModel]) -> Void) {
         getAllDocuments(ofType: RideModel.self, offset: offset, limit: limit, completionBlock: { rides in
@@ -84,5 +85,18 @@ extension DataLayer {
     }
     func getRideBy(reference: DocumentReference, completionBlock: @escaping ((RideModel?) -> Void)) {
         getDocumentsBy(reference: reference, ofType: RideModel.self, completionBlock: completionBlock as! (DataModel?) -> Void)
+    }
+}
+
+//MARK: - Bikes
+extension DataLayer {
+    func getMyBikes(completionBlock: @escaping ([BikeModel]) -> Void) {
+        //Authentication.shared.getCurrentUser()
+        getAllDocuments(ofType: BikeModel.self, completionBlock: { bikes in
+            guard let allBikes = bikes as? [BikeModel] else { print("error!"); return }
+            completionBlock(allBikes)
+        }) {
+            //
+        }
     }
 }
