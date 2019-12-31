@@ -12,8 +12,11 @@
 		D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F3512317B9590031892E /* StoriesCollectionVC.swift */; };
 		D028F3542317DCB60031892E /* StoryDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F3532317DCB60031892E /* StoryDetailedVC.swift */; };
 		D028F356231804860031892E /* PopupImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D028F355231804860031892E /* PopupImageViewController.swift */; };
-		D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D035D6EC230C8212002C428F /* GoogleService-Info.plist */; };
 		D035D6EF230C9856002C428F /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035D6EE230C9856002C428F /* DataLayer.swift */; };
+		D7199E0A23B1053B00CC6D42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7199E0923B1053B00CC6D42 /* GoogleService-Info.plist */; };
+		D7199E2D23BA017D00CC6D42 /* GarageCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7199E2C23BA017D00CC6D42 /* GarageCollectionVC.swift */; };
+		D7199E2F23BA01F500CC6D42 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7199E2E23BA01F500CC6D42 /* BikeModel.swift */; };
+		D7199E3123BA560600CC6D42 /* BikeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7199E3023BA560600CC6D42 /* BikeDetailsVC.swift */; };
 		D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A122E1D0C500CA7F70 /* Authentication.swift */; };
 		D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73709A422E1D4F400CA7F70 /* meViewController.swift */; };
 		D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73709A622E1FD7B00CA7F70 /* Assets.xcassets */; };
@@ -36,8 +39,11 @@
 		D028F3512317B9590031892E /* StoriesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionVC.swift; sourceTree = "<group>"; };
 		D028F3532317DCB60031892E /* StoryDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailedVC.swift; sourceTree = "<group>"; };
 		D028F355231804860031892E /* PopupImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupImageViewController.swift; sourceTree = "<group>"; };
-		D035D6EC230C8212002C428F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D035D6EE230C9856002C428F /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		D7199E0923B1053B00CC6D42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7199E2C23BA017D00CC6D42 /* GarageCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GarageCollectionVC.swift; path = Ryde/ViewControllers/Garage/GarageCollectionVC.swift; sourceTree = SOURCE_ROOT; };
+		D7199E2E23BA01F500CC6D42 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
+		D7199E3023BA560600CC6D42 /* BikeDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailsVC.swift; sourceTree = "<group>"; };
 		D73709A122E1D0C500CA7F70 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		D73709A422E1D4F400CA7F70 /* meViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meViewController.swift; sourceTree = "<group>"; };
 		D73709A622E1FD7B00CA7F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +100,15 @@
 			path = Stories;
 			sourceTree = "<group>";
 		};
+		D7199E2B23BA015100CC6D42 /* Garage */ = {
+			isa = PBXGroup;
+			children = (
+				D7199E2C23BA017D00CC6D42 /* GarageCollectionVC.swift */,
+				D7199E3023BA560600CC6D42 /* BikeDetailsVC.swift */,
+			);
+			path = Garage;
+			sourceTree = "<group>";
+		};
 		D73709A022E1D0AD00CA7F70 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +150,7 @@
 			children = (
 				D028F34C23145B890031892E /* StoryModel.swift */,
 				D75665A1230AE50D005C9132 /* RideModel.swift */,
+				D7199E2E23BA01F500CC6D42 /* BikeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,7 +183,7 @@
 				D7E2A7E62279DE8700B8EA8A /* UI */,
 				D7E2A7D42279DE7900B8EA8A /* AppDelegate.swift */,
 				D7E2A7E02279DE7B00B8EA8A /* Info.plist */,
-				D035D6EC230C8212002C428F /* GoogleService-Info.plist */,
+				D7199E0923B1053B00CC6D42 /* GoogleService-Info.plist */,
 			);
 			path = Ryde;
 			sourceTree = "<group>";
@@ -184,6 +200,7 @@
 		D7E2A7E72279DE9F00B8EA8A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7199E2B23BA015100CC6D42 /* Garage */,
 				D028F3502317B9380031892E /* Stories */,
 				D756659D230ADBB5005C9132 /* Rides */,
 				D7566584230A8F57005C9132 /* Social */,
@@ -255,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E2A7DF2279DE7B00B8EA8A /* LaunchScreen.storyboard in Resources */,
-				D035D6ED230C8212002C428F /* GoogleService-Info.plist in Resources */,
+				D7199E0A23B1053B00CC6D42 /* GoogleService-Info.plist in Resources */,
 				D73709A722E1FD7C00CA7F70 /* Assets.xcassets in Resources */,
 				D7E2A7DA2279DE7900B8EA8A /* Main.storyboard in Resources */,
 			);
@@ -330,13 +347,16 @@
 				D75665A4230BDC9E005C9132 /* RideDetailedVC.swift in Sources */,
 				D035D6EF230C9856002C428F /* DataLayer.swift in Sources */,
 				D7E2A7D52279DE7900B8EA8A /* AppDelegate.swift in Sources */,
+				D7199E2D23BA017D00CC6D42 /* GarageCollectionVC.swift in Sources */,
 				D028F34F2316ED6C0031892E /* StorageLayer.swift in Sources */,
 				D028F3522317B9590031892E /* StoriesCollectionVC.swift in Sources */,
+				D7199E2F23BA01F500CC6D42 /* BikeModel.swift in Sources */,
 				D028F356231804860031892E /* PopupImageViewController.swift in Sources */,
 				D028F3542317DCB60031892E /* StoryDetailedVC.swift in Sources */,
 				D756659C230AD73E005C9132 /* EshToolBelt.swift in Sources */,
 				D756659F230ADBC5005C9132 /* RidesCollectionVC.swift in Sources */,
 				D7ADFC82228D779900DCDFBF /* MainTabBarController.swift in Sources */,
+				D7199E3123BA560600CC6D42 /* BikeDetailsVC.swift in Sources */,
 				D73709A522E1D4F400CA7F70 /* meViewController.swift in Sources */,
 				D73709A222E1D0C500CA7F70 /* Authentication.swift in Sources */,
 				D028F34D23145B890031892E /* StoryModel.swift in Sources */,

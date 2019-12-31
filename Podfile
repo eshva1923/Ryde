@@ -19,6 +19,6 @@ target 'Ryde' do
 	pod 'CircleMenu'
 pod 'SearchTextField'
 pod 'SPAlert'
-pod 'SPPermission'
+pod 'SPPermissions'
 
 end

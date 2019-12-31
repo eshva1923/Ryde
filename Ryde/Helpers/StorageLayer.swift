@@ -22,7 +22,7 @@ class StorageLayer {
     }
 }
 
-//rides
+//MARK: - Rides
 extension RideModel {
     internal func getCoverImageReference() -> StorageReference? {
         return coverImage != nil ? StorageLayer.shared.imageReference(name: coverImage!, forModel: RideModel.self) : nil
@@ -37,7 +37,7 @@ extension RideModel {
     }
 }
 
-//stories
+//MARK: - Stories
 extension StoryModel {
     internal func getCoverImageReference() -> StorageReference {
         return StorageLayer.shared.imageReference(name: coverImage, forModel: StoryModel.self)
@@ -51,4 +51,12 @@ extension StoryModel {
         return ret
     }
     
+}
+
+//MARK: - Bikes
+extension BikeModel {
+    internal func getBikePhotoReference() -> StorageReference? {
+        guard let photoString = photo else { return nil }
+        return StorageLayer.shared.imageReference(name: photoString, forModel: BikeModel.self)
+    }
 }

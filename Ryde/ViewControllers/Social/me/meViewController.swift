@@ -26,7 +26,6 @@ internal class meViewController: UIViewController {
         currentUser = Authentication.shared.getCurrentUser()
         if currentUser == nil {
             //Authentication.shared.displayLogin(onViewController: self)
-            
         } else {
             setupMe()
         }
